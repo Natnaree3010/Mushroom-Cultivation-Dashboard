@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Cultivation Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header>
+            <h1> ❤ Mushroom Cultivation Dashboard ❤</h1>
+        </header>
+
+        <section class="mode-selection">
+            <h2>-●●●-Select Operating Mode-●●●-</h2>
+            <div class="buttons">
+                <button id="mode1" class="mode-btn active">Incubation Period</button>
+                <button id="mode2" class="mode-btn">Pinning Stage</button>
+                <button id="mode3" class="mode-btn">Fruiting Stage</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="sensor-readings">
+            <h2>-●●●-Current Sensor Readings-●●●-</h2>
+            <div class="grid-container">
+                <div class="sensor-card">
+                    <h3>🌡️ Temperature</h3>
+                    <p id="temp-value">-- °C</p>
+                    <small>Target: <span id="temp-target">25-30 °C</span></small>
+                </div>
+                <div class="sensor-card">
+                    <h3>💧 Relative Humidity</h3>
+                    <p id="humidity-value">-- %</p>
+                    <small>Target: <span id="humidity-target">N/A</span></small>
+                </div>
+                <div class="sensor-card">
+                    <h3>💨 Carbon Dioxide</h3>
+                    <p id="co2-value">-- ppm</p>
+                    <small>Target: <span id="co2-target">> 1000 ppm</span></small>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="graph-section">
+            <h2>-●●●-Trend Graphs-●●●-</h2>
+            <div class="chart-grid">
+                <div class="chart-container">
+                    <h3>Temperature</h3>
+                    <canvas id="tempChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Humidity</h3>
+                    <canvas id="humidityChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>CO2</h3>
+                    <canvas id="co2Chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </div> 
+    <div class="logout-to-home">
+        <a href="index.php?logout='1'" class="logout-button">Logout</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <script src="script.js"></script>
+ </body>
+</html>

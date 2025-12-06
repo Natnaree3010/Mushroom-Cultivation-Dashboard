@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+body {
+    background-image: url('photo/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    font-family: 'Kanit', sans-serif; 
+    min-height: 100vh;
+    color: #ffffff;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box; 
+}
+
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(200, 227, 223, 0.95); 
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    box-sizing: border-box; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    color: #0e6066;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); 
+    font-weight: 700; 
+}
+
+h2 {
+    color: #4e7375;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.mode-selection .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem; 
+    flex-wrap: wrap;
+    margin-top: 1.2rem; }
+
+.mode-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ecf0f1;
+    color: #34495e;
+    transition: all 0.3s ease;
+    font-weight: 700; 
+    flex-grow: 1; 
+    max-width: 200px; 
+    min-width: 100px; 
+}
+
+.mode-btn:hover {
+    background-color: #bdc3c7;
+}
+
+.mode-btn.active {
+    background-color: #8ebaba;
+    color: white;
+    font-weight: bold;
+}
+
+.sensor-readings .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1.2rem; 
+    margin-top: 1.2rem; 
+}
+
+.sensor-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s;
+}
+
+.sensor-card:hover {
+    transform: translateY(-3px);
+}
+
+.sensor-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem; 
+    color: #7f8c8d;
+}
+
+.sensor-card p {
+    font-size: clamp(1.8rem, 6vw, 2.5rem); 
+    font-weight: 700; 
+    color: #2c3e50;
+    margin: 0.5rem 0; 
+}
+
+.sensor-card small {
+    color: #95a5a6;
+    font-size: 0.8rem; 
+}
+
+.graph-section .chart-container {
+    margin-top: 3.5rem; 
+    position: relative;
+    height: 300px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 2rem 0; 
+}
+.logout-button {
+    
+    position: fixed; 
+    bottom: 20px;  
+    right: 20px;    
+    z-index: 1000;   
+    margin-top: 0;   
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #da4e5a; 
+    color: white;
+    text-decoration: none; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.logout-button:hover {
+    background-color: #a6222f; 
+}
+.chart-container {
+        position: relative;
+        height: 300px; 
+        width: 90%;   
+        margin: 20px auto;
+        margin-top: 2rem;
+    }
+    .chart-container h3 {
+        color:#4e7375;
+    }
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    .mode-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        flex-basis: 45%; 
+        max-width: none;
+    }
+
+    .sensor-readings .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+        gap: 0.8rem;
+    }
+
+    .graph-section .chart-container {
+        height: 250px; 
+    }
+}
